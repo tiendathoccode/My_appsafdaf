@@ -1,0 +1,44 @@
+* {
+    font-family: "JetBrains Mono", "FiraCode Nerd Font", sans-serif;
+    font-size: 12px; /* Thu nhỏ chữ để vừa khung 25px */
+    font-weight: bold;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: #1e1e2e;
+    color: #cdd6f4;
+    border: 1px solid #ffffff; /* Viền mỏng lại một chút */
+    border-radius: 8px;        /* Bo góc nhẹ hơn cho hợp với thanh mỏng */
+    margin: 4px 10px;          /* Khoảng cách lơ lửng với đáy màn hình */
+    box-shadow: 0px 3px 5px rgba(255, 255, 255, 0.15);
+}
+
+/* Các khối con: Xóa khoảng cách dọc (0) để nội dung tự căn giữa theo chiều cao của thanh */
+#workspaces, #clock, #network, #bluetooth, #battery, #tray {
+    padding: 0 10px;
+    margin: 0;
+}
+
+#workspaces {
+    padding: 0 4px;
+}
+
+#workspaces button {
+    padding: 0 8px;
+    color: #cdd6f4;
+    border-radius: 6px;
+    transition: all 0.2s ease-in-out;
+}
+
+#workspaces button.active {
+    background-color: #ffffff;
+    color: #1e1e2e;
+}
+
+#workspaces button:hover {
+    background-color: #313244;
+}
+
+#battery.warning { color: #f9e2af; }
+#battery.critical { color: #f38ba8; }

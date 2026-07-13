@@ -1,0 +1,57 @@
+{
+    "layer": "top",
+    "position": "bottom",
+    "height": 25,
+    "spacing": 5,
+
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": [
+        "network",
+        "bluetooth",
+        "battery",
+        "tray"
+    ],
+
+    "hyprland/workspaces": {
+        "format": "{name}",
+        "disable-scroll": true,
+        "all-outputs": true,
+        "persistent-workspaces": {
+            "*": [1, 2, 3, 4, 5]
+        }
+    },
+
+    "clock": {
+        "format": "{:%H:%M | %d/%m/%Y}",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>"
+    },
+
+    "network": {
+        "format-wifi": "WiFi: {essid}",
+        "format-ethernet": "ETH",
+        "format-disconnected": "No Net",
+        "tooltip-format": "{ipaddr}"
+    },
+
+    "bluetooth": {
+        "format": "BT: {status}",
+        "format-connected": "BT: {device_alias}",
+        "tooltip-format": "{controller_alias}\t{controller_address}"
+    },
+
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "Bat: {capacity}%",
+        "format-charging": "Chg: {capacity}%",
+        "format-plugged": "Plug: {capacity}%"
+    },
+
+    "tray": {
+        "icon-size": 14,
+        "spacing": 8
+    }
+}
